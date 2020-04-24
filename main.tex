@@ -2,24 +2,47 @@
 \input{preamble/preamble}
 \input{preamble/math-preamble.tex}
 
+\newcommand{\blind}{0}
+
+% remove thanks asterisk (make sure only set for blinded version)
+%\makeatletter
+%\def\thanks#1{\protected@xdef\@thanks{\@thanks
+%        \protect\footnotetext{#1}}}
+%\makeatother
+
 \begin{document}
 
-\title{  {\LARGE Awesome New Method Paper Title}\thanks{xxx}}
+
+\if0\blind
+{
+\title{ Awesome New Method Paper Title }
 
 \author{
-Joshua Daniel Loyal \thanks{Department of Statistics, University of Illinois Urbana-Champaign, Champaign, IL 61820; email: \href{mailto:jloyal2@illinois.edu}{jloyal2@illinois.edu}.} \,
-and Ruoqing Zhu \thanks{Department of Statistics, University of Illinois Urbana-Champaign, Champaign, IL 61820; email: \href{mailto:rqzhu@illinois.edu}{rqzhu@illinois.edu}.}
+Joshua Daniel Loyal \thanks{Joshua Daniel Loyal is Ph.D Candidate (E-mail: \href{mailto:jloyal2@illinois.edu}{jloyal2@illinois.edu}), Department of Statistics, University of Illinois at Urbana-Champaign, Champaign, IL 61820}
 }
 
 \date{\today}
 \maketitle
+}
+\fi
+\if1\blind
+{
+\title{ Awesome New Method Paper Title }
+
+\author{\thanks{\vspace{2em}}}
+
+\date{\today}
+\maketitle
+}\fi
 
 \begin{abstract}
 An abstract
 \end{abstract}
 
-\noindent {\bf keywords}
-KW1, KW2.
+\noindent {KEY WORDS:}
+Key Word 1; Key Word 2.
+
+\spacingset{1.2}
 
 % Introduction
 \input{introduction}
@@ -36,12 +59,17 @@ KW1, KW2.
 % Simulation
 \input{simulation}
 
-%% Real Data Analysis
-%\input{real_data}
+% Real Data Analysis
+\input{real_data}
 
-\section{Discussion}\label{sec:disc}
+% Discussion
+\input{discussion}
 
-\bibliographystyle{asa}
+\bibliographystyle{apalike}
 \bibliography{reference}
+
+\clearpage
+
+\input{appendix}
 
 \end{document}

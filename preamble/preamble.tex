@@ -1,42 +1,53 @@
 \usepackage{amsthm,amsmath,amssymb,bbm,bm}
 \usepackage{mathtools}
 \usepackage{natbib}
-\usepackage{multirow}
 \usepackage[pdftex]{graphicx}
-\usepackage{subfigure}
-\usepackage{wrapfig}
-\usepackage{array}
+\usepackage{appendix}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{url}
-\usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
-\usepackage{mathrsfs}
-\usepackage{dsfont}
-\usepackage{titling}
-\usepackage{relsize}
-\usepackage{rotating}
-\usepackage{enumitem}
 \usepackage{booktabs}
+\usepackage{float}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage[colorlinks=true,
             linkcolor=red,
             anchorcolor=blue,
             citecolor=blue,
-            urlcolor=blue]{hyperref}
+            urlcolor=blue,
+            hypertexnames=false]{hyperref}
 
-\usepackage[a4paper,
- %total={170mm,257mm},
- left=28mm,
- top=30mm]{geometry}
-
-\renewcommand{\baselinestretch}{1.1}
-{\textwidth=6in}
-
+% double-spacing command
+\usepackage{setspace}
 \usepackage{chngcntr}
+\def\spacingset#1{\renewcommand{\baselinestretch}%
+{#1}\small\normalsize} \spacingset{1}
 
+% paper margins
+\usepackage[a4paper, margin=1in]{geometry}
+
+% font of references
+%\renewcommand{\bibfont}{\small}
+
+\usepackage{tikz}
+\usetikzlibrary{bayesnet}
+\usepackage{tikzscale}
+
+% change format of subfigures
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+% section formating
+%\titleformat{\subsection}
+%{\normalfont\large\bfseries\itshape}{\thesubsection}{1em}{}
+%
+%\titleformat{\subsubsection}
+%{\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
+
+% theorem/lemma/definition counts
 \counterwithin{equation}{section}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
-
 \newtheorem{thm}{Theorem}
 \newtheorem{lemma}{Lemma}
 \counterwithin{thm}{section}
@@ -46,5 +57,15 @@
 \renewcommand\theassump{A\arabic{assump}}
 
 
+% allows breaks in allign environments
+\allowdisplaybreaks
 \def\bal#1\eal{\begin{align}#1\end{align}}
 \def\balnn#1\ealnn{\begin{align*}#1\end{align*}}
+
+% author comments
+\newcommand{\jl}[1]{\textcolor{orange}{\textbf{[#1]}}}
+
+% float for sampler code
+\floatstyle{boxed}
+\newfloat{sampler}{thp}{los}
+\floatname{sampler}{Algorithm}
