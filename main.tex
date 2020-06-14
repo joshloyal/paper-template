@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \input{preamble/preamble}
 \input{preamble/math-preamble.tex}
 
@@ -18,7 +18,7 @@
 \title{ Awesome New Method Paper Title }
 
 \author{
-Joshua Daniel Loyal \thanks{Joshua Daniel Loyal is Ph.D Candidate (E-mail: \href{mailto:jloyal2@illinois.edu}{jloyal2@illinois.edu}), Department of Statistics, University of Illinois at Urbana-Champaign, Champaign, IL 61820}
+Joshua Daniel Loyal\thanks{Joshua Daniel Loyal is Ph.D Candidate (E-mail: \href{mailto:jloyal2@illinois.edu}{jloyal2@illinois.edu}), Department of Statistics, University of Illinois at Urbana-Champaign, Champaign, IL 61820}
 }
 
 \date{\today}
@@ -42,28 +42,38 @@ An abstract
 \noindent {KEY WORDS:}
 Key Word 1; Key Word 2.
 
-\spacingset{1.2}
+\spacingset{1.5}
 
 % Introduction
-\input{introduction}
+\section{Introduction} \label{sec:intro}
+
+Review current methods, theory, and discuss why it is not efficient. Needs a lot of references. Has to be brief.
 
 % Method
-\input{method}
+\section{Method} \label{sec:method}
 
-% Algorithm
-\input{algorithm}
+Describe the new method \citep{Li:1991sir}.
+
+\section{Algorithm}\label{sec:alg}
+
+Describe the algorithm here in detail.
 
 % Theory
-\input{theory}
+\section{Theoretical Results} \label{sec:theory}
+Any theory can go here.
 
 % Simulation
-\input{simulation}
+\section{Simulation Studies} \label{sec:simulation}
+
+Include any simulated data studies.
 
 % Real Data Analysis
-\input{real_data}
+\section{Real Data Application}\label{sec:realdata}
+
+Section for any analysis done on real world datasets.
 
 % Discussion
-\input{discussion}
+\section{Discussion}\label{sec:disc}
 
 \bibliographystyle{apalike}
 \bibliography{reference}
