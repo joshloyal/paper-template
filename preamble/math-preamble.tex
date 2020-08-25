@@ -1,8 +1,10 @@
-% optimization
+% miscellaneous
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\bigoh}{\mathcal{O}}
 \DeclareMathOperator*{\logit}{logit}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\tr}{tr}
 \DeclareMathOperator*{\invlogit}{logit^{-1}}
 
 % various delimiters / bracketing operations
@@ -36,11 +38,11 @@
 }
 
 % probability
-\newcommand{\Prob}{P \, \variancearg}
+\newcommand{\Prob}{\mathbb{P} \, \variancearg}
 \newcommand{\E}{\mathbb{E} \, \expectarg}
+\newcommand{\Eq}[2]{\mathbb{E}_{#1}\left[#2\right]}
 \newcommand{\Var}{\operatorname{Var}\variancearg}
 \newcommand{\Cov}{\operatorname{Cov}\variancearg}
-\newcommand{\Cor}{\operatorname{Cor}\variancearg}
 \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
 
 % distributions
@@ -58,6 +60,8 @@
 \newcommand{\HDPHMM}{\operatorname{HDP-HMM}}
 \newcommand{\StickyHDPHMM}{\operatorname{Sticky-HDP-HMM}}
 \newcommand{\NormalInvGamma}{\operatorname{Normal-\Gamma^{-1}}}
+\newcommand{\PG}{\operatorname{PG}}
+\newcommand{\LDS}{\operatorname{LDS}}
 
 % indicator function
 \def\mOne{{\mathbbm{1}}}
@@ -81,17 +85,30 @@
 \newcommand{\bz}{\mathbf{z}}
 \newcommand{\bW}{\mathbf{W}}
 \newcommand{\bU}{\mathbf{U}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bv}{\mathbf{v}}
 \newcommand{\bd}{\mathbf{d}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\ba}{\mathbf{a}}
 \newcommand{\bpi}{\boldsymbol\pi}
 \newcommand{\bbeta}{\boldsymbol\beta}
 \newcommand{\btheta}{\boldsymbol\theta}
 \newcommand{\blambda}{\boldsymbol\lambda}
+\newcommand{\bgamma}{\boldsymbol\gamma}
 \newcommand{\bdelta}{\boldsymbol\delta}
+\newcommand{\boldeta}{\boldsymbol\eta}
 \newcommand{\bphi}{\boldsymbol\phi}
 \newcommand{\bmu}{\boldsymbol\mu}
+\newcommand{\bnu}{\boldsymbol\nu}
 \newcommand{\bpsi}{\boldsymbol\psi}
+\newcommand{\bkappa}{\boldsymbol\kappa}
+\newcommand{\bomega}{\boldsymbol\omega}
 \newcommand{\boldm}{\mathbf{m}}
 \newcommand{\bolds}{\mathbf{s}}
 \newcommand{\boldw}{\mathbf{w}}
 \newcommand{\boldmbar}{\mathbf{\bar{m}}}
 \newcommand{\boldmubar}{\bar{\bmu}}
+
+% network symbols
+\newcommand{\dyads}{\mathcal{D}}
